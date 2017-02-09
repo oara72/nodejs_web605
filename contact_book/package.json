@@ -1,0 +1,27 @@
+{
+  "name": "contact_book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js --ignore node_modules"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "jsonwebtoken": "^7.2.1",
+    "morgan": "^1.8.0",
+    "q": "^1.4.1",
+    "sequelize": "^3.30.2",
+    "sequelize-cli": "^2.5.1",
+    "socket.io": "^1.7.2",
+    "sqlite3": "^3.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
