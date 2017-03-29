@@ -1,4 +1,4 @@
-# Integrating Relationships into our API 
+# Integrating Relationships into our API #
 
 *Note: File is best viewed in a editor with markdown preview turned on*
 
@@ -323,22 +323,3 @@ router.delete('/:userId/', (req, res) => {
     * DELETE /api/v1/users/:userId/
 
 Completed code is available at: https://github.com/ShawnCC/web615_contactbook_backend/tree/week2
-
-
-{
-"user": {
-"name": "Tyrion Lannister",
-"email": "casterlyrock@email.com",
-"phone_number": "555 555 5555"
-    }
-}
-
-{
-"contact": {
-"name": "tywinlannister",
-"email": "casterlyrock@email.com",
-"phone_number": "555 555 5555",
-"user_id": 3
-}
-}
-
