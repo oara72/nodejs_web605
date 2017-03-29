@@ -1,5 +1,3 @@
-# README
-
 # Steps to Creating a JSON API #
 
 *Note: File is best viewed in a editor with markdown preview turned on*
@@ -476,4 +474,3 @@ With all that in place we should have a JSON API with the following endpoints:
 * DELETE /api/v1/contacts/:contactId/
 
 Completed code is available at: [https://github.com/ShawnCC/web615_contactbook_backend/tree/week1](https://github.com/ShawnCC/web615_contactbook_backend/tree/week1)
-
