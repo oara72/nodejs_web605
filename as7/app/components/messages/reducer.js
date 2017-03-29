@@ -8,8 +8,8 @@ const defaultState = {
 };
 
 /**
- * This reducer will listen for all the error events
- */
+* This reducer will listen for all the error events
+*/
 const reducer = (state = defaultState, action) => {
     switch (action.type) {
         case 'CONTACTS_GET_ERROR': {

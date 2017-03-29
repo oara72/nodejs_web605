@@ -15,16 +15,16 @@ class Contacts extends React.Component {
     }
     
     /**
-     * Dispatch action to get the contacts
-     */
+    * Dispatch action to get the contacts
+    */
     getContacts() {
         this.context.store.dispatch(getContacts());
     }
 
     /**
-     * Method built into React.Component, this is called right before the
-     * component renders for the first time
-     */
+    * Method built into React.Component, this is called right before the
+    * component renders for the first time
+    */
     componentWillMount() {
         this.getContacts();
     }
@@ -62,9 +62,9 @@ Contacts.contextTypes = {
 };
 
 /**
- * This will set up the various reducers as props in our component
- * @param {Object} state - The store for our application, contains all reducers
- */
+* This will set up the various reducers as props in our component
+* @param {Object} state - The store for our application, contains all reducers
+*/
 function mapStateToProps(state) {
     return {
         reducer: state.contactsReducer
