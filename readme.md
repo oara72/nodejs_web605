@@ -606,10 +606,3 @@ Completed code is available at: https://github.com/ShawnCC/web615_contactbook_ba
 
 There was a lot of code covered this week, if you have any questions don't hesistate to ask questions during lab times, or email me at scrusvar@stclaircollege.ca
      
-{
-    "user": {
-    	"name" : "oliver alexander",
-        "email": "email@test.com",
-        "password": "password12"
-    }
-}
