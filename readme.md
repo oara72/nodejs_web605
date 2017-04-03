@@ -672,6 +672,9 @@ Also you'll want to grab a copy of the backend code, all of our data will be com
     ```
     * We should now be able to click into a list item, click the update button and be directed to a form with that Contacts data, if we update the data and submit the form our Contact should be updated
 
+    Nota: para correr la semana 2 hay que poner ```npm start```
+          para correr la semana 10 hay que poner ```npm run server```
+
 Completed code is available at: https://github.com/ShawnCC/web615_contactbook_frontend/tree/week11
 
 I've also done a bit more clean up in the completed code, mostly involving the moving of actions to point to the files in the actions directory

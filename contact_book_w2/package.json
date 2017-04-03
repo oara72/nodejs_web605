@@ -6,16 +6,19 @@
     "start": "nodemon app.js --ignore node_modules"
   },
   "dependencies": {
-    "async": "^2.1.4",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "morgan": "^1.7.0",
-    "sequelize": "^3.29.0",
-    "sequelize-cli": "^2.5.1",
+    "async": "^2.3.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
     "jshint": "^2.9.4",
     "nodemon": "^1.11.0"
-  }
+  },
+  "main": "app.js",
+  "author": "oliver",
+  "license": "ISC"
 }
