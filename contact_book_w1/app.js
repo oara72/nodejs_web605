@@ -31,7 +31,7 @@ app.use((req, res) => {
     });
 });
 
-models.sequelize.sync({ force: true }).then(() => {
+models.sequelize.sync({ force: false }).then(() => {
     server.listen(3001, () => {
         var address = server.address();
 
