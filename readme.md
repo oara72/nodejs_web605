@@ -1,3 +1,5 @@
+# readme
+
 # Authenticating API Requests #
 
 *Note: File is best viewed in a editor with markdown preview turned on*
@@ -605,4 +607,3 @@ Be sure to install all dependencies for the project before you go any further
 Completed code is available at: https://github.com/ShawnCC/web615_contactbook_backend/tree/week3
 
 There was a lot of code covered this week, if you have any questions don't hesistate to ask questions during lab times, or email me at scrusvar@stclaircollege.ca
-     
