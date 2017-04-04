@@ -1,35 +1,28 @@
 'use strict';
 
-
-
 const express = require('express');
 const router = express.Router();
-// Since we are now using sequelize to querying our database we must now include models
 const async = require('async');
 const models = require('../../../models');
 
-//endpoint to get all contacts
+/**
+ * Get all the contacts
+ * GET /api/v1/contacts/
+ */
 router.get('/', (req, res) => {
-    // I almost always create a responseData object to store the data I'll be returning from the endpoint
     let responseData = {};
 
-    // All sequelize queries follow a similar pattern, first the model to query, then the query type
     models.contact.findAll({
         order: [
             ['id', 'ASC']
         ]
-    // A successful query is handled in the "then" portion of the promise
     }).then((data) => {
-        // We'll some values to the responseData object
         responseData.status = 200;
         responseData.message = 'Contacts retrieved successfully!';
         responseData.contacts = data;
 
-        // Return with a appropriate status code
         res.status(responseData.status);
-        // And return with the JSON
         res.json(responseData);
-    // Errors from querying are handled in the "catch" portion of the promise
     }).catch((err) => {
         console.log(new Date());
         console.log(err);
@@ -42,7 +35,10 @@ router.get('/', (req, res) => {
     });
 });
 
-// We can define paramaters in our request with ":param", these become accessible via req.params
+/**
+ * Get a contact
+ * GET /api/v1/contacts/:contactId/
+ */
 router.get('/:contactId/', (req, res) => {
     let responseData = {};
 
@@ -65,7 +61,10 @@ router.get('/:contactId/', (req, res) => {
     });
 });
 
-//endpoint to create contacts
+/**
+ * Create a contact
+ * POST /api/v1/contacts/
+ */
 router.post('/', (req, res) => {
     let responseData = {};
 
@@ -88,23 +87,21 @@ router.post('/', (req, res) => {
     });
 });
 
-//endpoint to update a contact
-
+/**
+ * Update a contact
+ * PUT /api/v1/contacts/:contactId/
+ */
 router.put('/:contactId/', (req, res) => {
     let responseData = {};
     let contact;
 
-    // Since we are doing multiple queries, we'll control the flow using the async library
     async.series([
         // Get the contact
         (callback) => {
             models.contact.findById(req.params.contactId).then((data) => {
-                // Ensure that the contact exists
                 if (data) {
-                    // Set the returned data to the contact variable so it can be accessed by the next method in the series
                     contact = data;
                     return callback();
-                // If the contact doesn't exist return with a 404
                 } else {
                     responseData.status = 404,
                     responseData.message = 'Contact not found.';
@@ -127,15 +124,14 @@ router.put('/:contactId/', (req, res) => {
             contact.save().then((data) => {
                 responseData.contact = data;
 
-                return callback();
-            }).catch((err) => {
+				return callback();
+			}).catch((err) => {
                 responseData.status = 500,
                 responseData.message = 'Error updating Contact.';
 
                 return callback(err);
-            });
+			});
         }
-    // The final callback is where you check for errors handle the final response,
     ], (err) => {
         if (err) {
             console.log(new Date());
@@ -153,7 +149,10 @@ router.put('/:contactId/', (req, res) => {
     });
 });
 
-//endpoint to delete a contact
+/**
+ * Delete a contact
+ * DELETE /api/v1/contacts/:contactId/
+ */
 router.delete('/:contactId/', (req, res) => {
     let responseData = {};
 

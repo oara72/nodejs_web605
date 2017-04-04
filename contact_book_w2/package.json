@@ -1,24 +1,24 @@
 {
-  "name": "web615-contact-book-app",
+  "name": "contact_book",
   "version": "1.0.0",
-  "description": "St. Clair WEB615 Winter 2017 Contact Book App",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js --ignore node_modules"
+    "start": "nodemon app.js --ignore node_modules",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "oliver",
+  "license": "ISC",
   "dependencies": {
-    "async": "^2.3.0",
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "morgan": "^1.8.1",
-    "sequelize": "^3.30.4",
-    "sequelize-cli": "^2.7.0",
+    "async": "^2.1.4",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "morgan": "^1.8.0",
+    "sequelize": "^3.30.2",
+    "sequelize-cli": "^2.5.1",
     "sqlite3": "^3.1.8"
   },
   "devDependencies": {
-    "jshint": "^2.9.4",
     "nodemon": "^1.11.0"
   },
-  "main": "app.js",
-  "author": "oliver",
-  "license": "ISC"
+  "description": ""
 }

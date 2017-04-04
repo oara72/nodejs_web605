@@ -10,7 +10,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <header>
-                <h1>My Game of Thrones Contact Book App</h1>
+                <h1>WEB615 Contact Book App</h1>
             </header>
         );
     }
