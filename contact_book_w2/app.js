@@ -17,6 +17,13 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
 // Require Routes
 const v1Contacts = require('./routes/api/v1/contacts');
 const v1Users = require('./routes/api/v1/users');
