@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShawnCC/web615_socket_client.git"
+    "url": "https://github.com/ShawnCC/web615_socket_client.git"
   },
   "author": "Shawn Crusvar",
   "license": "ISC",
@@ -20,8 +20,6 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2"
-  },
-  "main": "app.js"
+  }
 }
