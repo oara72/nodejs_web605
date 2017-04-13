@@ -1,0 +1,25 @@
+{
+  "name": "web615_socket_client",
+  "version": "1.0.0",
+  "description": "Simple client to test the Socket.IO implementation in our API",
+  "scripts": {
+    "start": "nodemon app.js --ignore node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShawnCC/web615_socket_client.git"
+  },
+  "author": "Shawn Crusvar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShawnCC/web615_socket_client/issues"
+  },
+  "homepage": "https://github.com/ShawnCC/web615_socket_client",
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "socket.io-client": "^1.7.2"
+  }
+}
